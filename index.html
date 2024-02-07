@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Using CSS Grid</title>
-	<style>
-		body{
-			color: #fff;
-			font-family: 'Nunito Semibold';
-			text-align: center;
-		}
-		#content{
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			/*grid-auto-rows: minmax(150px, auto);*/
-			grid-template-rows: repeat(3, minmax(150px, auto));
-			/*grid-row-gap: 10px;
-			grid-column-gap: 10px;*/
-			grid-gap: 10px;
-			max-width: 960px;
-			margin: 0 auto;
-		}
-		#content div{
-			background: #3bbced;
-			padding: 30px;
-		}
-		#content div:nth-child(even){
-			background: #777;
-			padding: 30px;
-		}
-	</style>
-</head>
-<body>
-
-	<div id="content">
-
-		<div>1</div>
-		<div>2</div>
-		<div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-		<div>4</div>
-		<div>5</div>
-		<div>6</div>
-		<div>7</div>
-		<div>8</div>
-		<div>9</div>
-
-	</div>
-
-</body>
+  <head>
+    <title>Using CSS Grid</title>
+    <style>
+      body{
+      	color: #fff;
+      	font-family: 'Nunito Semibold';
+      	text-align: center;
+      }
+      #content{
+      	display: grid;
+      	/* grid-template-columns: 33.3% 33.3% 33.3%; */
+      	border:1px solid #000;
+        grid-auto-rows: minmax(200px,250px); /*Actual up-to*/
+      	grid-template-columns: repeat(3, 1fr);
+        grid-gap: 7px 8px; /*rows columns {short-hand}*/
+      	max-width: 960px;
+      	margin: 0 auto;
+      }
+      #content div{
+      	background: #3bbced;
+      	padding: 30px;
+        /* box-sizing: border-box; */
+      }
+      #content div:nth-child(even){
+      	background: #777;
+      	padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <div>1</div>
+      <div>2</div>
+      <div style="overflow-y: scroll;">In aliqua consequat adipisicing labore pariatur Lorem ipsum commodo reprehenderit ut cupidatat consequat mollit. Elit irure proident deserunt eiusmod culpa pariatur ex ex veniam incididunt reprehenderit et amet. Ullamco nisi commodo nulla ea qui exercitation elit mollit aliqua mollit. Veniam aliqua amet ex adipisicing aliqua adipisicing labore veniam ea in quis dolor ea. Laboris incididunt ullamco do fugiat do deserunt id ad. Eu elit cillum quis tempor ex velit excepteur id quis reprehenderit enim incididunt. Magna veniam qui deserunt incididunt laboris reprehenderit ea sunt ut aute.</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+  </body>
 </html>
